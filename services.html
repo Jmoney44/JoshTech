@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — JoshTech</title>
+<meta name="description" content="Product design, frontend development and design systems — what Josh can build for your team, and what it costs.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">J</span>
+      Josh<span class="brand-tech">Tech</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="is-active">Services</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-primary" id="bookBtn" type="button">Book Me <span class="btn-arrow">→</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-header section-pad">
+  <div class="container">
+    <span class="eyebrow">// services</span>
+    <h1 class="h2 page-title">What I can build <em>for your team</em></h1>
+    <p class="lede">From a first wireframe to a shipped, maintainable product — here's where I usually plug in, and what each engagement covers.</p>
+  </div>
+</section>
+
+<!-- ============ MARQUEE STRIP ============ -->
+<div class="strip">
+  <div class="strip-track">
+    <span>Product Design</span>
+    <span>Frontend Development</span>
+    <span>Design Systems</span>
+    <span>API Architecture</span>
+    <span>Product Design</span>
+    <span>Frontend Development</span>
+    <span>Design Systems</span>
+    <span>API Architecture</span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ACCORDION ============ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">// how I can help</span>
+      <h2 class="h2">Five ways to bring me <em>into a project</em></h2>
+      <p class="lede">Click a row to see what's included. Most projects end up mixing two or three of these.</p>
+    </div>
+
+    <div class="accordion" id="servicesAccordion">
+
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-num">01</span>
+          <span class="acc-name">Product &amp; UI Design</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner">
+            <p>Turning a rough idea or a messy existing product into clear, component-based screens in Figma — ready to hand to any developer, not just me.</p>
+            <div class="acc-tags">
+              <span>User flows &amp; wireframes</span>
+              <span>Hi-fi UI screens</span>
+              <span>Prototyping</span>
+              <span>Design handoff</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item is-open">
+        <button class="acc-trigger" type="button">
+          <span class="acc-num">02</span>
+          <span class="acc-name">Frontend Development</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner acc-panel-split">
+            <div>
+              <p>Building the interface in React with clean, typed components — matching the design file closely and staying easy for another engineer to pick up later.</p>
+              <div class="acc-tags">
+                <span>React &amp; Next.js</span>
+                <span>Responsive builds</span>
+                <span>Component libraries</span>
+                <span>Performance tuning</span>
+              </div>
+            </div>
+            <div class="acc-visual">
+              <div class="window small">
+                <div class="window-bar">
+                  <span></span><span></span><span></span>
+                  <em>Button.tsx</em>
+                </div>
+                <div class="window-body mono">
+                  <div><span class="tok-key">export function</span> <span class="tok-var">Button</span>({ children }) {</div>
+                  <div class="indent"><span class="tok-key">return</span> &lt;<span class="tok-attr">button</span> <span class="tok-attr">className</span>=<span class="tok-str">"btn"</span>&gt;</div>
+                  <div class="indent indent-2">{children}</div>
+                  <div class="indent">&lt;/<span class="tok-attr">button</span>&gt;</div>
+                  <div>}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-num">03</span>
+          <span class="acc-name">Design Systems</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner">
+            <p>Tokens, reusable components and short docs so your product looks consistent as more people start building on top of it.</p>
+            <div class="acc-tags">
+              <span>Design tokens</span>
+              <span>Component libraries</span>
+              <span>Documentation</span>
+              <span>Figma ↔ code parity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-num">04</span>
+          <span class="acc-name">API Integration &amp; Backend Basics</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner">
+            <p>Connecting the frontend to real data — REST or GraphQL APIs, auth flows, and lightweight Node services when a project needs one.</p>
+            <div class="acc-tags">
+              <span>REST &amp; GraphQL</span>
+              <span>Auth flows</span>
+              <span>Node.js services</span>
+              <span>Third-party integrations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-num">05</span>
+          <span class="acc-name">Website Design</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner">
+            <p>Marketing sites, landing pages and portfolios — fast-loading, easy to update, and built to actually convert visitors.</p>
+            <div class="acc-tags">
+              <span>Landing pages</span>
+              <span>SEO basics</span>
+              <span>CMS-friendly builds</span>
+              <span>Mobile-first</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="services-more">
+      <button type="button" class="btn btn-primary js-open-book">Discuss your project <span class="btn-arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section-pad pricing-section">
+  <div class="container">
+    <div class="section-head center">
+      <span class="eyebrow">// pricing</span>
+      <h2 class="h2">Simple ways <em>to work together</em></h2>
+      <p class="lede">Rough starting points — every quote gets tailored after a quick call about scope.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <span class="tag">Flexible</span>
+        <h3 class="price-name">Hourly</h3>
+        <div class="price-amount">$25<span>/ hr</span></div>
+        <ul class="price-list">
+          <li>Good for small fixes &amp; audits</li>
+          <li>No minimum commitment</li>
+          <li>Weekly time summary</li>
+          <li>Async updates via WhatsApp</li>
+        </ul>
+        <button type="button" class="btn btn-ghost js-open-book price-btn">Get started</button>
+      </div>
+
+      <div class="price-card is-featured">
+        <span class="tag">Most popular</span>
+        <h3 class="price-name">Project-based</h3>
+        <div class="price-amount">$800<span>+ / project</span></div>
+        <ul class="price-list">
+          <li>Fixed scope &amp; timeline</li>
+          <li>Design + build, end to end</li>
+          <li>Weekly check-in calls</li>
+          <li>2 weeks post-launch support</li>
+        </ul>
+        <button type="button" class="btn btn-primary js-open-book price-btn">Get started</button>
+      </div>
+
+      <div class="price-card">
+        <span class="tag">Ongoing</span>
+        <h3 class="price-name">Monthly retainer</h3>
+        <div class="price-amount">$1,600<span>/ mo</span></div>
+        <ul class="price-list">
+          <li>Dedicated hours each month</li>
+          <li>Priority response time</li>
+          <li>Design + dev coverage</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <button type="button" class="btn btn-ghost js-open-book price-btn">Get started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div>
+      <span class="eyebrow">// not sure what you need?</span>
+      <h2 class="h2">Let's figure it out <em>on a quick call</em></h2>
+    </div>
+    <button type="button" class="btn btn-primary js-open-book">Book Me <span class="btn-arrow">→</span></button>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">J</span>
+          Josh<span class="brand-tech">Tech</span>
+        </a>
+        <p>Product designer and frontend developer helping small teams ship interfaces that feel obvious in hindsight.</p>
+        <div class="social-row">
+          <a href="https://facebook.com/joshtech" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8.5h2.5V5H15c-2 0-3.5 1.5-3.5 3.5V11H9.5v3H11.5v6h3v-6h2.3l.5-3H14.5V9c0-.5.4-1 .5-1z"/></svg></a>
+          <a href="https://instagram.com/joshtech" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://x.com/joshtech" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M3 3l7.5 9.1L3.4 21h2.6l6-6.9 4.8 6.9H21l-7.8-9.6L20.3 3h-2.6l-5.5 6.3L7.6 3H3z"/></svg></a>
+          <a href="https://github.com/joshtech" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.1-.5 2V21"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">More</div>
+        <ul class="footer-links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Get in touch</div>
+        <ul class="footer-links">
+          <li><a href="mailto:joshtech3913@gmail.com">joshtech3913@gmail.com</a></li>
+          <li><a href="https://wa.me/2347070503044" target="_blank" rel="noopener">0707 050 3044 (WhatsApp)</a></li>
+          <li>Lagos, Nigeria</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JoshTech. All rights reserved.</span>
+      <span>Built by Josh, with Josh's own stack.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BOOK ME MODAL ============ -->
+<div class="modal-overlay" id="bookOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+    <button class="modal-close" id="bookClose" aria-label="Close booking form">✕</button>
+    <span class="eyebrow">// book a session</span>
+    <h3 id="bookTitle" class="modal-title">Let's get your project moving</h3>
+    <p class="modal-sub">Fill this in and it'll open WhatsApp with everything ready to send straight to me.</p>
+
+    <form id="bookForm" class="book-form">
+      <label>Full name
+        <input type="text" name="name" required placeholder="Your name">
+      </label>
+      <label>Email
+        <input type="email" name="email" required placeholder="you@email.com">
+      </label>
+      <label>WhatsApp / phone number
+        <input type="tel" name="phone" required placeholder="e.g. 0803 123 4567">
+      </label>
+      <label>What do you need?
+        <select name="service" required>
+          <option value="" disabled selected>Choose a service</option>
+          <option>Product & UI Design</option>
+          <option>Frontend Development</option>
+          <option>Design System</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Project details
+        <textarea name="message" rows="4" required placeholder="Tell me a bit about the project, timeline, budget..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary book-submit">Send via WhatsApp <span class="btn-arrow">→</span></button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ CHATBOT WIDGET ============ -->
+<div class="chatbot" id="chatbot">
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <span class="brand-mark small">J</span>
+      <div>
+        <strong>JoshTech Assistant</strong>
+        <span>Usually replies instantly</span>
+      </div>
+      <button id="chatClose" aria-label="Close chat">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg msg-bot">Hey 👋 I'm Josh's assistant. Ask me about services, projects, pricing, or how to book a session.</div>
+    </div>
+    <div class="chat-quick" id="chatQuick">
+      <button data-q="services">Services</button>
+      <button data-q="pricing">Pricing</button>
+      <button data-q="book">Book a call</button>
+      <button data-q="contact">Contact info</button>
+    </div>
+    <form class="chat-input-row" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off">
+      <button type="submit" aria-label="Send">→</button>
+    </form>
+  </div>
+  <button class="chat-fab" id="chatToggle" aria-label="Open chat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.4-.2-3.4-.6L3 21l1.6-4.8C3.6 15 3 13.6 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
+  </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

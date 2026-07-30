@@ -1,0 +1,91 @@
+/* ================= Page header (shared pattern for inner pages) ================= */
+.page-header{ padding-top: 64px; padding-bottom: 56px; }
+.page-title{ margin-top: 4px; }
+.page-header .lede{ max-width: 620px; }
+
+/* ================= Accordion ================= */
+.accordion{ display: flex; flex-direction: column; gap: 14px; }
+.acc-item{
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color .2s ease;
+}
+.acc-item.is-open{ border-color: var(--green-dim); }
+
+.acc-trigger{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 26px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  text-align: left;
+}
+.acc-num{ font-family: var(--f-mono); font-size: 14px; color: var(--green); width: 28px; flex-shrink: 0; }
+.acc-name{ font-family: var(--f-display); font-size: 18px; flex: 1; }
+.acc-icon{
+  font-family: var(--f-mono);
+  font-size: 18px;
+  color: var(--text-muted);
+  transition: transform .2s ease, color .2s ease;
+  flex-shrink: 0;
+}
+.acc-item.is-open .acc-icon{ transform: rotate(45deg); color: var(--green); }
+
+.acc-panel{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .28s ease;
+}
+.acc-item.is-open .acc-panel{ max-height: 480px; }
+.acc-panel-inner{ padding: 0 26px 28px 74px; }
+.acc-panel-inner p{ color: var(--text-muted); font-size: 14.5px; max-width: 640px; }
+.acc-tags{ display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.acc-tags span{
+  font-family: var(--f-mono); font-size: 12.5px;
+  border: 1px solid var(--border); border-radius: 100px;
+  padding: 6px 14px; color: var(--text-muted);
+}
+.acc-panel-split{ display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: start; }
+.acc-visual .window.small{ margin-top: 4px; }
+.acc-visual .window-body{ padding: 20px 18px; font-size: 13px; line-height: 1.8; }
+.indent-2{ padding-left: 20px; }
+
+@media (max-width: 720px){
+  .acc-panel-inner{ padding-left: 26px; }
+  .acc-panel-split{ grid-template-columns: 1fr; }
+  .acc-item.is-open .acc-panel{ max-height: 900px; }
+}
+
+/* ================= Pricing ================= */
+.pricing-section{ background: var(--bg-alt); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+.pricing-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.price-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex; flex-direction: column;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.price-card:hover{ transform: translateY(-3px); }
+.price-card.is-featured{
+  border-color: var(--green-dim);
+  background: linear-gradient(180deg, rgba(34,200,131,.08), rgba(19,26,36,0));
+  box-shadow: var(--glow);
+}
+.price-name{ font-family: var(--f-display); font-size: 19px; margin: 16px 0 6px; }
+.price-amount{ font-family: var(--f-display); font-size: 34px; margin-bottom: 22px; }
+.price-amount span{ font-family: var(--f-body); font-size: 14px; color: var(--text-muted); font-weight: 400; }
+.price-list{ display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; flex: 1; }
+.price-list li{ font-size: 14px; color: var(--text-muted); padding-left: 20px; position: relative; }
+.price-list li::before{ content: "✓"; position: absolute; left: 0; color: var(--green); }
+.price-btn{ justify-content: center; width: 100%; }
+
+@media (max-width: 860px){
+  .pricing-grid{ grid-template-columns: 1fr; }
+}

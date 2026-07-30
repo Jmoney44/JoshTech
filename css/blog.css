@@ -1,0 +1,54 @@
+/* Filter tabs reuse the same visual language as projects.css but this page
+   is not guaranteed to load projects.css, so the rules are duplicated here. */
+.filter-row{ display: flex; gap: 10px; margin-bottom: 44px; flex-wrap: wrap; }
+.filter-btn{
+  font-family: var(--f-mono); font-size: 13px;
+  border: 1px solid var(--border); border-radius: 100px;
+  background: transparent; color: var(--text-muted);
+  padding: 10px 20px;
+  transition: all .15s ease;
+}
+.filter-btn:hover{ border-color: var(--green-dim); color: var(--text); }
+.filter-btn.is-active{ background: var(--gradient); color: #06110C; border-color: transparent; }
+
+/* ================= Blog grid ================= */
+.blog-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.blog-card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.blog-card:hover{ border-color: var(--green-dim); transform: translateY(-3px); }
+.blog-card.is-hidden{ display: none; }
+
+.blog-thumb{ aspect-ratio: 16/10; }
+.thumb-1{ background: linear-gradient(135deg, #17323C, #123B33); }
+.thumb-2{ background: linear-gradient(135deg, #123B33, #1B4A3E); }
+.thumb-3{ background: linear-gradient(135deg, #1A2E3E, #0F3A42); }
+.thumb-4{ background: linear-gradient(135deg, #123B33, #12474A); }
+.thumb-5{ background: linear-gradient(135deg, #17323C, #1B4A3E); }
+.thumb-6{ background: linear-gradient(135deg, #0F3A42, #123B33); }
+
+.blog-body{ padding: 24px 24px 26px; }
+.blog-top{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; gap: 10px; }
+.blog-date{ font-size: 11.5px; color: var(--text-faint); white-space: nowrap; }
+.blog-body h3{ font-family: var(--f-display); font-size: 16.5px; line-height: 1.35; margin-bottom: 10px; }
+.blog-excerpt{ font-size: 13.5px; color: var(--text-muted); margin-bottom: 18px; }
+
+.details-toggle{
+  font-family: var(--f-mono); font-size: 13px; color: var(--green);
+  background: none; border: none; padding: 0;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.details-toggle .btn-arrow{ transition: transform .18s ease; }
+.blog-card.is-open .details-toggle .btn-arrow{ transform: rotate(90deg); }
+
+.blog-details{ max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+.blog-card.is-open .blog-details{ max-height: 620px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-soft); }
+.blog-details p{ font-size: 13.5px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
+.blog-details code{ font-family: var(--f-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; font-size: 12.5px; }
+
+@media (max-width: 960px){ .blog-grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .blog-grid{ grid-template-columns: 1fr; } }

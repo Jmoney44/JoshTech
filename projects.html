@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — JoshTech</title>
+<meta name="description" content="A selection of product design and frontend development work — mobile apps, web apps and design systems shipped by Josh.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">J</span>
+      Josh<span class="brand-tech">Tech</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="is-active">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-primary" id="bookBtn" type="button">Book Me <span class="btn-arrow">→</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HEADER ============ -->
+<section class="page-header section-pad">
+  <div class="container">
+    <span class="eyebrow">// projects</span>
+    <h1 class="h2 page-title">Let's have a look <em>at my portfolio</em></h1>
+    <p class="lede">A mix of mobile apps, web apps and design systems — each one built from first wireframe through to shipped product.</p>
+  </div>
+</section>
+
+<!-- ============ FILTER + GRID ============ -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="container">
+
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn is-active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="mobile">Mobile App</button>
+      <button class="filter-btn" data-filter="web">Web App</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <article class="project-card" data-category="mobile">
+        <div class="project-thumb thumb-1"></div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>Recipe App — Food Discovery</h3>
+            <span class="tag">Mobile App</span>
+          </div>
+          <p class="project-desc">A recipe discovery app built around what's already in your fridge — search, save, and step-by-step cook mode.</p>
+          <div class="project-meta">
+            <div><span>Client</span><strong>Kitchen Collective</strong></div>
+            <div><span>Duration</span><strong>6 weeks</strong></div>
+            <div><span>Role</span><strong>Product Design</strong></div>
+          </div>
+          <button type="button" class="details-toggle">View details <span class="btn-arrow">→</span></button>
+          <div class="project-details">
+            <p><strong>Challenge —</strong> Early users dropped off mid-recipe because steps were buried in long scrolls.</p>
+            <p><strong>Outcome —</strong> Redesigned around a distraction-free cook mode with large steps and voice-friendly timers, cutting drop-off by roughly a third in testing.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="web">
+        <div class="project-thumb thumb-2"></div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>Ledger — Freelance Invoicing</h3>
+            <span class="tag">Web App</span>
+          </div>
+          <p class="project-desc">A lightweight invoicing tool for freelancers — quotes, invoices and payment reminders in one clean dashboard.</p>
+          <div class="project-meta">
+            <div><span>Client</span><strong>Ledger Inc.</strong></div>
+            <div><span>Duration</span><strong>8 weeks</strong></div>
+            <div><span>Role</span><strong>Design + Frontend</strong></div>
+          </div>
+          <button type="button" class="details-toggle">View details <span class="btn-arrow">→</span></button>
+          <div class="project-details">
+            <p><strong>Challenge —</strong> Existing invoicing tools felt built for accountants, not freelancers who just want to get paid.</p>
+            <p><strong>Outcome —</strong> Simplified the whole flow to three steps — build, send, get paid — and rebuilt the frontend in React for a faster, more reliable experience.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="mobile">
+        <div class="project-thumb thumb-3"></div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>Ebook &amp; Audiobook App UI</h3>
+            <span class="tag">Mobile App</span>
+          </div>
+          <p class="project-desc">A reading and listening app that lets you pick up an audiobook exactly where you left off the ebook.</p>
+          <div class="project-meta">
+            <div><span>Client</span><strong>Chapters</strong></div>
+            <div><span>Duration</span><strong>4 weeks</strong></div>
+            <div><span>Role</span><strong>UI Design</strong></div>
+          </div>
+          <button type="button" class="details-toggle">View details <span class="btn-arrow">→</span></button>
+          <div class="project-details">
+            <p><strong>Challenge —</strong> Switching between text and audio meant losing your place, which quietly killed engagement.</p>
+            <p><strong>Outcome —</strong> Designed a shared progress model so both formats stay in sync automatically, plus a calmer, distraction-free reading view.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="web">
+        <div class="project-thumb thumb-4"></div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>Finly — Personal Finance Dashboard</h3>
+            <span class="tag">Web App</span>
+          </div>
+          <p class="project-desc">A dashboard for tracking spending across accounts, with a design system built to scale to future features.</p>
+          <div class="project-meta">
+            <div><span>Client</span><strong>Finly</strong></div>
+            <div><span>Duration</span><strong>10 weeks</strong></div>
+            <div><span>Role</span><strong>Design System + Frontend</strong></div>
+          </div>
+          <button type="button" class="details-toggle">View details <span class="btn-arrow">→</span></button>
+          <div class="project-details">
+            <p><strong>Challenge —</strong> The product was growing faster than the UI could keep up with, and every new feature looked slightly different.</p>
+            <p><strong>Outcome —</strong> Built a token-based design system and component library, so new screens now ship in days instead of weeks.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="mobile">
+        <div class="project-thumb thumb-5"></div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>PulseFit — Workout Tracker</h3>
+            <span class="tag">Mobile App</span>
+          </div>
+          <p class="project-desc">A no-fuss workout logger for people who don't want a social feed attached to their gym session.</p>
+          <div class="project-meta">
+            <div><span>Client</span><strong>PulseFit</strong></div>
+            <div><span>Duration</span><strong>5 weeks</strong></div>
+            <div><span>Role</span><strong>Product Design</strong></div>
+          </div>
+          <button type="button" class="details-toggle">View details <span class="btn-arrow">→</span></button>
+          <div class="project-details">
+            <p><strong>Challenge —</strong> Most fitness apps buried logging a set behind three taps and a feed nobody asked for.</p>
+            <p><strong>Outcome —</strong> Stripped it down to a one-tap logger with a simple weekly view — no feed, no noise.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="web">
+        <div class="project-thumb thumb-6"></div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>Framely — SaaS Landing Page</h3>
+            <span class="tag">Web App</span>
+          </div>
+          <p class="project-desc">A conversion-focused marketing site for a design-tool startup, built to launch fast and iterate faster.</p>
+          <div class="project-meta">
+            <div><span>Client</span><strong>Framely</strong></div>
+            <div><span>Duration</span><strong>3 weeks</strong></div>
+            <div><span>Role</span><strong>Website Design</strong></div>
+          </div>
+          <button type="button" class="details-toggle">View details <span class="btn-arrow">→</span></button>
+          <div class="project-details">
+            <p><strong>Challenge —</strong> The old site explained the product feature-by-feature but never made a clear case for switching.</p>
+            <p><strong>Outcome —</strong> Rewrote the page around a single before/after story, which nearly doubled the signup rate in the first month.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div>
+      <span class="eyebrow">// like what you see?</span>
+      <h2 class="h2">Let's build <em>something like this</em></h2>
+    </div>
+    <button type="button" class="btn btn-primary js-open-book">Book Me <span class="btn-arrow">→</span></button>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a href="index.html" class="brand">
+          <span class="brand-mark">J</span>
+          Josh<span class="brand-tech">Tech</span>
+        </a>
+        <p>Product designer and frontend developer helping small teams ship interfaces that feel obvious in hindsight.</p>
+        <div class="social-row">
+          <a href="https://facebook.com/joshtech" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8.5h2.5V5H15c-2 0-3.5 1.5-3.5 3.5V11H9.5v3H11.5v6h3v-6h2.3l.5-3H14.5V9c0-.5.4-1 .5-1z"/></svg></a>
+          <a href="https://instagram.com/joshtech" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://x.com/joshtech" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M3 3l7.5 9.1L3.4 21h2.6l6-6.9 4.8 6.9H21l-7.8-9.6L20.3 3h-2.6l-5.5 6.3L7.6 3H3z"/></svg></a>
+          <a href="https://github.com/joshtech" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.1-.5 2V21"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Navigate</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">More</div>
+        <ul class="footer-links">
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-heading">Get in touch</div>
+        <ul class="footer-links">
+          <li><a href="mailto:joshtech3913@gmail.com">joshtech3913@gmail.com</a></li>
+          <li><a href="https://wa.me/2347070503044" target="_blank" rel="noopener">0707 050 3044 (WhatsApp)</a></li>
+          <li>Lagos, Nigeria</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JoshTech. All rights reserved.</span>
+      <span>Built by Josh, with Josh's own stack.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BOOK ME MODAL ============ -->
+<div class="modal-overlay" id="bookOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+    <button class="modal-close" id="bookClose" aria-label="Close booking form">✕</button>
+    <span class="eyebrow">// book a session</span>
+    <h3 id="bookTitle" class="modal-title">Let's get your project moving</h3>
+    <p class="modal-sub">Fill this in and it'll open WhatsApp with everything ready to send straight to me.</p>
+
+    <form id="bookForm" class="book-form">
+      <label>Full name
+        <input type="text" name="name" required placeholder="Your name">
+      </label>
+      <label>Email
+        <input type="email" name="email" required placeholder="you@email.com">
+      </label>
+      <label>WhatsApp / phone number
+        <input type="tel" name="phone" required placeholder="e.g. 0803 123 4567">
+      </label>
+      <label>What do you need?
+        <select name="service" required>
+          <option value="" disabled selected>Choose a service</option>
+          <option>Product & UI Design</option>
+          <option>Frontend Development</option>
+          <option>Design System</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Project details
+        <textarea name="message" rows="4" required placeholder="Tell me a bit about the project, timeline, budget..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary book-submit">Send via WhatsApp <span class="btn-arrow">→</span></button>
+    </form>
+  </div>
+</div>
+
+<!-- ============ CHATBOT WIDGET ============ -->
+<div class="chatbot" id="chatbot">
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <span class="brand-mark small">J</span>
+      <div>
+        <strong>JoshTech Assistant</strong>
+        <span>Usually replies instantly</span>
+      </div>
+      <button id="chatClose" aria-label="Close chat">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg msg-bot">Hey 👋 I'm Josh's assistant. Ask me about services, projects, pricing, or how to book a session.</div>
+    </div>
+    <div class="chat-quick" id="chatQuick">
+      <button data-q="services">Services</button>
+      <button data-q="pricing">Pricing</button>
+      <button data-q="book">Book a call</button>
+      <button data-q="contact">Contact info</button>
+    </div>
+    <form class="chat-input-row" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off">
+      <button type="submit" aria-label="Send">→</button>
+    </form>
+  </div>
+  <button class="chat-fab" id="chatToggle" aria-label="Open chat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4.4-4 8-9 8-1.2 0-2.4-.2-3.4-.6L3 21l1.6-4.8C3.6 15 3 13.6 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
+  </button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
