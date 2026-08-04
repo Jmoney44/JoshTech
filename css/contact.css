@@ -1,0 +1,78 @@
+/* ================= Contact grid ================= */
+.contact-grid{ display: grid; grid-template-columns: 1.3fr .9fr; gap: 32px; align-items: start; }
+
+.contact-form{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+.form-row{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* ================= Info sidebar ================= */
+.contact-side{ display: flex; flex-direction: column; gap: 18px; }
+.contact-card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px 26px;
+}
+.contact-card-title{ font-family: var(--f-display); font-size: 16px; margin-bottom: 10px; margin-top: 4px; }
+.contact-card p{ font-size: 13.5px; color: var(--text-muted); line-height: 1.6; }
+
+.contact-list{ display: flex; flex-direction: column; gap: 12px; }
+.contact-list li{ display: flex; flex-direction: column; gap: 2px; }
+.contact-list span{ font-family: var(--f-mono); font-size: 11px; color: var(--text-faint); }
+.contact-list a{ font-size: 14px; color: var(--text); transition: color .15s ease; }
+.contact-list a:hover{ color: var(--green); }
+
+/* ================= FAQ ================= */
+.faq-section{ background: var(--bg-alt); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
+
+.accordion{ display: flex; flex-direction: column; gap: 14px; }
+.acc-item{
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color .2s ease;
+}
+.acc-item.is-open{ border-color: var(--green-dim); }
+
+.acc-trigger{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 26px;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  text-align: left;
+}
+.acc-name{ font-family: var(--f-display); font-size: 18px; flex: 1; }
+.acc-icon{
+  font-family: var(--f-mono);
+  font-size: 18px;
+  color: var(--text-muted);
+  transition: transform .2s ease, color .2s ease;
+  flex-shrink: 0;
+}
+.acc-item.is-open .acc-icon{ transform: rotate(45deg); color: var(--green); }
+
+.acc-panel{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .28s ease;
+}
+.acc-item.is-open .acc-panel{ max-height: 480px; }
+.acc-panel-inner{ padding: 0 26px 28px 26px; }
+.acc-panel-inner p{ color: var(--text-muted); font-size: 14.5px; max-width: 640px; }
+
+@media (max-width: 920px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+@media (max-width: 560px){
+  .form-row{ grid-template-columns: 1fr; }
+  .contact-form{ padding: 26px 22px; }
+}

@@ -1,8 +1,15 @@
 /* ================= About main ================= */
 .about-main-grid{ display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: center; }
 .about-main-visual{ position: relative; }
-.about-frame.large{ max-width: 380px; }
-.about-frame.large .brand-mark.xlarge{ width: 140px; height: 140px; border-radius: 34px; font-size: 52px; }
+.about-photo-frame{
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.about-photo-frame.large{ max-width: 380px; }
+.about-photo{ width: 100%; height: 100%; object-fit: cover; display: block; }
 
 .stat-row{ display: flex; gap: 34px; margin: 30px 0 26px; }
 .stat-row strong{ display: block; font-family: var(--f-display); font-size: 24px; }
@@ -10,7 +17,7 @@
 
 @media (max-width: 860px){
   .about-main-grid{ grid-template-columns: 1fr; gap: 44px; }
-  .about-frame.large{ margin: 0 auto; }
+  .about-photo-frame.large{ margin: 0 auto; }
   .stat-row{ flex-wrap: wrap; gap: 24px; }
 }
 

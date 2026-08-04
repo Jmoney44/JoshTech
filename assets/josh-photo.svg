@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Placeholder portrait">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#131A24"/>
+      <stop offset="1" stop-color="#0D131B"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22C883"/>
+      <stop offset="1" stop-color="#10A6A0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.34" r="0.55">
+      <stop offset="0" stop-color="#22C883" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#22C883" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg)"/>
+
+  <!-- dot grid -->
+  <g fill="#212B38">
+    <circle cx="24" cy="24" r="1.4"/><circle cx="60" cy="24" r="1.4"/><circle cx="96" cy="24" r="1.4"/>
+    <circle cx="24" cy="60" r="1.4"/><circle cx="60" cy="60" r="1.4"/><circle cx="96" cy="60" r="1.4"/>
+    <circle cx="304" cy="340" r="1.4"/><circle cx="340" cy="340" r="1.4"/><circle cx="376" cy="340" r="1.4"/>
+    <circle cx="304" cy="376" r="1.4"/><circle cx="340" cy="376" r="1.4"/><circle cx="376" cy="376" r="1.4"/>
+  </g>
+
+  <circle cx="200" cy="140" r="180" fill="url(#glow)"/>
+
+  <!-- abstract avatar -->
+  <circle cx="200" cy="164" r="62" fill="url(#brand)" opacity="0.16"/>
+  <circle cx="200" cy="150" r="46" fill="none" stroke="url(#brand)" stroke-width="2"/>
+  <path d="M96 340c8-58 52-96 104-96s96 38 104 96" fill="none" stroke="url(#brand)" stroke-width="2"/>
+
+  <!-- corner tick, echoes site brand mark -->
+  <path d="M400 0v46a20 20 0 0 1-20 20h-26z" fill="url(#brand)" opacity="0.9"/>
+
+  <text x="30" y="368" font-family="'JetBrains Mono', monospace" font-size="13" fill="#5C6773">// photo coming soon</text>
+</svg>

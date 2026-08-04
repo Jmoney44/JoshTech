@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — JoshTech</title>
-<meta name="description" content="Meet Josh — product designer and frontend developer. Background, tools, education, work experience and a few awards along the way.">
+<title>Contact — JoshTech</title>
+<meta name="description" content="Get in touch with Josh about your next product design or frontend development project. Fill the form and it opens straight into WhatsApp.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/services.css">
+<link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
 
@@ -22,11 +23,11 @@
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="about.html" class="is-active">About</a>
+      <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
       <a href="blog.html">Blog</a>
       <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="is-active">Contact</a>
     </nav>
     <div class="nav-cta">
       <button class="btn btn-primary" id="bookBtn" type="button">Book Me <span class="btn-arrow">→</span></button>
@@ -38,193 +39,146 @@
 <!-- ============ PAGE HEADER ============ -->
 <section class="page-header section-pad">
   <div class="container">
-    <span class="eyebrow">// about</span>
-    <h1 class="h2 page-title">The person behind <em>JoshTech</em></h1>
-    <p class="lede">A bit of background on how I got here, what I use to get the work done, and a few of the stops along the way.</p>
+    <span class="eyebrow">// contact</span>
+    <h1 class="h2 page-title">Let's talk about <em>your next project</em></h1>
+    <p class="lede">Fill in the form and it opens WhatsApp with everything ready to send — no email back-and-forth needed.</p>
   </div>
 </section>
 
-<!-- ============ ABOUT ME ============ -->
-<section class="section-pad about-main">
-  <div class="container about-main-grid">
-    <div class="about-main-visual">
-      <div class="about-photo-frame large">
-        <img src="assets/josh-photo.svg" alt="Josh, product designer and frontend developer" class="about-photo">
-      </div>
-      <div class="about-float">
-        <strong>6+</strong>
-        <span>Years building</span>
-      </div>
-    </div>
+<!-- ============ CONTACT ============ -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="container contact-grid">
 
-    <div class="about-main-copy">
-      <span class="eyebrow">// who is josh</span>
-      <h2 class="h2">A designer who <em>ships his own code</em></h2>
-      <p class="lede" style="max-width:100%;">I got into this by accident — fixing a friend's broken website turned into freelancing, which turned into a full design-and-build practice. I care about the same thing on every project: does this actually make someone's day a little easier to get through. Everything else — the tool, the framework, the trend — is negotiable.</p>
-      <p class="lede" style="max-width:100%;">Outside of client work I spend a lot of time refining JoshTech's own systems: components, templates and small tools that let me move fast without cutting corners.</p>
-
-      <div class="stat-row">
-        <div><strong>40+</strong><span>Projects completed</span></div>
-        <div><strong>12+</strong><span>Industries covered</span></div>
-        <div><strong>16+</strong><span>Happy clients</span></div>
+    <form id="contactForm" class="book-form contact-form">
+      <div class="form-row">
+        <label>Full name
+          <input type="text" name="name" required placeholder="Your name">
+        </label>
+        <label>Email
+          <input type="email" name="email" required placeholder="you@email.com">
+        </label>
       </div>
-
-      <div class="hero-actions" style="margin-top:8px;">
-        <button type="button" class="btn btn-primary js-open-book">Work with me <span class="btn-arrow">→</span></button>
-        <a href="mailto:joshtech3913@gmail.com" class="btn btn-ghost">joshtech3913@gmail.com</a>
+      <div class="form-row">
+        <label>WhatsApp / phone number
+          <input type="tel" name="phone" required placeholder="e.g. 0803 123 4567">
+        </label>
+        <label>What do you need?
+          <select name="service" required>
+            <option value="" disabled selected>Choose a service</option>
+            <option>Product & UI Design</option>
+            <option>Frontend Development</option>
+            <option>Design System</option>
+            <option>Something else</option>
+          </select>
+        </label>
       </div>
-    </div>
+      <label>Project details
+        <textarea name="message" rows="6" required placeholder="Tell me a bit about the project, timeline, budget..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary book-submit">Send via WhatsApp <span class="btn-arrow">→</span></button>
+      <p class="form-note" id="contactNote">Opened WhatsApp in a new tab — just hit send there. 👋</p>
+    </form>
+
+    <aside class="contact-side">
+      <div class="contact-card">
+        <span class="eyebrow">// find me</span>
+        <h3 class="contact-card-title">Address</h3>
+        <p>Lagos, Nigeria<br>Working remotely, worldwide</p>
+      </div>
+      <div class="contact-card">
+        <h3 class="contact-card-title">Reach out directly</h3>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:joshtech3913@gmail.com">joshtech3913@gmail.com</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/2347070503044" target="_blank" rel="noopener">0707 050 3044</a></li>
+        </ul>
+      </div>
+      <div class="contact-card">
+        <h3 class="contact-card-title">Hours</h3>
+        <p>Mon &ndash; Fri, 9am &ndash; 6pm WAT<br>Usually replies within a few hours</p>
+      </div>
+      <div class="contact-card">
+        <h3 class="contact-card-title">Stay connected</h3>
+        <div class="social-row">
+          <a href="https://facebook.com/joshtech" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 8.5h2.5V5H15c-2 0-3.5 1.5-3.5 3.5V11H9.5v3H11.5v6h3v-6h2.3l.5-3H14.5V9c0-.5.4-1 .5-1z"/></svg></a>
+          <a href="https://instagram.com/joshtech" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".6" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://x.com/joshtech" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M3 3l7.5 9.1L3.4 21h2.6l6-6.9 4.8 6.9H21l-7.8-9.6L20.3 3h-2.6l-5.5 6.3L7.6 3H3z"/></svg></a>
+          <a href="https://github.com/joshtech" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.1-.5 2V21"/></svg></a>
+        </div>
+      </div>
+    </aside>
+
   </div>
 </section>
 
-<!-- ============ MARQUEE STRIP ============ -->
-<div class="strip">
-  <div class="strip-track">
-    <span>Product Design</span>
-    <span>Frontend Development</span>
-    <span>Design Systems</span>
-    <span>API Architecture</span>
-    <span>Product Design</span>
-    <span>Frontend Development</span>
-    <span>Design Systems</span>
-    <span>API Architecture</span>
-  </div>
-</div>
-
-<!-- ============ TOOLS ============ -->
-<section class="section-pad">
+<!-- ============ FAQ ============ -->
+<section class="section-pad faq-section">
   <div class="container">
     <div class="section-head center">
-      <span class="eyebrow">// tools</span>
-      <h2 class="h2">What <em>powers the work</em></h2>
-      <p class="lede">The stack I reach for most, and roughly how comfortable I am in each.</p>
+      <span class="eyebrow">// faqs</span>
+      <h2 class="h2">Questions? <em>Look here</em></h2>
     </div>
 
-    <div class="tools-grid">
-      <div class="tool">
-        <div class="skill-ring" style="--p:96"><span>96%</span></div>
-        <strong>Figma</strong>
-      </div>
-      <div class="tool">
-        <div class="skill-ring" style="--p:92"><span>92%</span></div>
-        <strong>React</strong>
-      </div>
-      <div class="tool">
-        <div class="skill-ring" style="--p:88"><span>88%</span></div>
-        <strong>Next.js</strong>
-      </div>
-      <div class="tool">
-        <div class="skill-ring" style="--p:85"><span>85%</span></div>
-        <strong>TypeScript</strong>
-      </div>
-      <div class="tool">
-        <div class="skill-ring" style="--p:90"><span>90%</span></div>
-        <strong>Tailwind CSS</strong>
-      </div>
-      <div class="tool">
-        <div class="skill-ring" style="--p:78"><span>78%</span></div>
-        <strong>Node.js</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ EDUCATION & EXPERIENCE ============ -->
-<section class="section-pad edu-section">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow">// education &amp; work</span>
-      <h2 class="h2">My education <em>&amp; work experience</em></h2>
-    </div>
-
-    <div class="edu-grid">
-      <div class="edu-col">
-        <div class="edu-heading">
-          <span class="edu-icon">🎓</span>
-          <h3>Education</h3>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-year mono">2016 – 2020</span>
-            <strong>B.Sc. Computer Science</strong>
-            <span class="timeline-sub">University of Lagos</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year mono">2020 – 2021</span>
-            <strong>UI/UX Design Certification</strong>
-            <span class="timeline-sub">Google &middot; Coursera</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year mono">2014 – 2016</span>
-            <strong>Senior Secondary School</strong>
-            <span class="timeline-sub">Command Secondary School, Lagos</span>
+    <div class="accordion faq-accordion" id="faqAccordion">
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-name">Are you available for freelance or contract work?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner" style="padding-left:26px;">
+            <p>Yes — I typically take on 1-2 new projects a month so I can give each one proper attention. Book a call and I'll let you know the current timeline.</p>
           </div>
         </div>
       </div>
 
-      <div class="edu-col">
-        <div class="edu-heading">
-          <span class="edu-icon">💼</span>
-          <h3>Work Experience</h3>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-year mono">2022 – Present</span>
-            <strong>Founder &amp; Product Designer</strong>
-            <span class="timeline-sub">JoshTech (self-employed)</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year mono">2020 – 2022</span>
-            <strong>Frontend Developer</strong>
-            <span class="timeline-sub">TechNova Studios</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-year mono">2019 – 2020</span>
-            <strong>Junior UI Designer</strong>
-            <span class="timeline-sub">Freelance</span>
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-name">What industries do you specialize in?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner" style="padding-left:26px;">
+            <p>Most of my work has been in fintech, productivity tools and consumer apps, but the process transfers well — what matters more is a team that cares about getting the details right.</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ============ AWARDS ============ -->
-<section class="section-pad">
-  <div class="container">
-    <div class="section-head center">
-      <span class="eyebrow">// recognition</span>
-      <h2 class="h2">A few <em>nice moments</em></h2>
-    </div>
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-name">What does your process look like, start to finish?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner" style="padding-left:26px;">
+            <p>A discovery call, then wireframes, then hi-fi design, then a build phase with weekly check-ins. For smaller projects some of these steps get combined, but the shape stays the same.</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="awards-grid">
-      <div class="card award-card">
-        <span class="award-icon">🏆</span>
-        <h3 class="card-title">Client Choice Award</h3>
-        <p class="card-text">Top-rated freelance designer, voted by clients on a major freelance platform — 2024.</p>
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-name">Do you offer support after launch?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner" style="padding-left:26px;">
+            <p>Project-based work includes two weeks of post-launch support by default, and I offer monthly retainers for teams that want ongoing coverage after that.</p>
+          </div>
+        </div>
       </div>
-      <div class="card award-card">
-        <span class="award-icon">⭐</span>
-        <h3 class="card-title">Best UI Design</h3>
-        <p class="card-text">First place, UI category, at a regional hackathon for fintech products — 2022.</p>
-      </div>
-      <div class="card award-card">
-        <span class="award-icon">🚀</span>
-        <h3 class="card-title">Rising Talent</h3>
-        <p class="card-text">Recognised by a local design community as one of the year's emerging product designers — 2023.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ============ CTA BANNER ============ -->
-<section class="cta-banner">
-  <div class="container cta-inner">
-    <div>
-      <span class="eyebrow">// let's work together</span>
-      <h2 class="h2">Got a project <em>in mind</em>?</h2>
+      <div class="acc-item">
+        <button class="acc-trigger" type="button">
+          <span class="acc-name">How do I get started?</span>
+          <span class="acc-icon">＋</span>
+        </button>
+        <div class="acc-panel">
+          <div class="acc-panel-inner" style="padding-left:26px;">
+            <p>Fill in the form above or tap "Book Me" — either opens WhatsApp with your details ready to send. I'll reply with next steps, usually within a few hours.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <button type="button" class="btn btn-primary js-open-book">Book Me <span class="btn-arrow">→</span></button>
   </div>
 </section>
 

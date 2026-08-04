@@ -24,9 +24,20 @@ document.addEventListener("DOMContentLoaded", function () {
   var closeBtn = document.getElementById("bookClose");
   var openers = document.querySelectorAll("#bookBtn, .js-open-book");
   var form = document.getElementById("bookForm");
+  var planRow = document.getElementById("bookPlanRow");
+  var planInput = document.getElementById("bookPlanInput");
 
-  function openModal() {
+  function openModal(plan) {
     if (!overlay) return;
+    if (planRow && planInput) {
+      if (plan) {
+        planInput.value = plan;
+        planRow.hidden = false;
+      } else {
+        planInput.value = "";
+        planRow.hidden = true;
+      }
+    }
     overlay.classList.add("is-open");
     document.body.style.overflow = "hidden";
   }
@@ -37,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   openers.forEach(function (btn) {
-    btn.addEventListener("click", openModal);
+    btn.addEventListener("click", function () {
+      openModal(btn.getAttribute("data-plan"));
+    });
   });
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (overlay) {
@@ -49,14 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape") closeModal();
   });
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
+  /* Reusable: wires any booking-style form to open WhatsApp with a
+     prefilled message. onSuccess (optional) runs after opening WhatsApp,
+     e.g. to close a modal or show a confirmation note. */
+  function attachWhatsAppForm(formEl, onSuccess) {
+    if (!formEl) return;
+    formEl.addEventListener("submit", function (e) {
       e.preventDefault();
-      var data = new FormData(form);
+      var data = new FormData(formEl);
       var name = (data.get("name") || "").trim();
       var email = (data.get("email") || "").trim();
       var phone = (data.get("phone") || "").trim();
       var service = (data.get("service") || "").trim();
+      var plan = (data.get("plan") || "").trim();
       var message = (data.get("message") || "").trim();
 
       var text =
@@ -65,14 +83,26 @@ document.addEventListener("DOMContentLoaded", function () {
         "Email: " + email + "\n" +
         "Phone: " + phone + "\n" +
         "Service: " + service + "\n" +
+        (plan ? "Plan: " + plan + "\n" : "") +
         "Details: " + message;
 
       var url = "https://wa.me/" + JOSHTECH_WHATSAPP + "?text=" + encodeURIComponent(text);
       window.open(url, "_blank", "noopener");
-      form.reset();
-      closeModal();
+      formEl.reset();
+      if (onSuccess) onSuccess();
     });
   }
+
+  attachWhatsAppForm(form, closeModal);
+
+  var contactForm = document.getElementById("contactForm");
+  var contactNote = document.getElementById("contactNote");
+  attachWhatsAppForm(contactForm, function () {
+    if (contactNote) {
+      contactNote.classList.add("is-visible");
+      setTimeout(function () { contactNote.classList.remove("is-visible"); }, 5000);
+    }
+  });
 
   /* ---------- Chatbot ---------- */
   var chatToggle = document.getElementById("chatToggle");
@@ -151,9 +181,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* ---------- Services accordion ---------- */
-  var accordion = document.getElementById("servicesAccordion");
-  if (accordion) {
+  /* ---------- Accordions (services list, FAQ, etc.) ---------- */
+  document.querySelectorAll(".accordion").forEach(function (accordion) {
     accordion.querySelectorAll(".acc-item").forEach(function (item) {
       var trigger = item.querySelector(".acc-trigger");
       trigger.addEventListener("click", function () {
@@ -162,6 +191,66 @@ document.addEventListener("DOMContentLoaded", function () {
           i.classList.remove("is-open");
         });
         if (!wasOpen) item.classList.add("is-open");
+      });
+    });
+  });
+
+  /* ---------- Projects filter ---------- */
+  var filterRow = document.getElementById("filterRow");
+  var projectsGrid = document.getElementById("projectsGrid");
+  if (filterRow && projectsGrid) {
+    var filterBtns = filterRow.querySelectorAll(".filter-btn");
+    var cards = projectsGrid.querySelectorAll(".project-card");
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        filterBtns.forEach(function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        var filter = btn.getAttribute("data-filter");
+
+        cards.forEach(function (card) {
+          var match = filter === "all" || card.getAttribute("data-category") === filter;
+          card.classList.toggle("is-hidden", !match);
+        });
+      });
+    });
+  }
+
+  /* ---------- Project details toggle ---------- */
+  if (projectsGrid) {
+    projectsGrid.querySelectorAll(".details-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var card = btn.closest(".project-card");
+        if (card) card.classList.toggle("is-open");
+      });
+    });
+  }
+
+  /* ---------- Blog filter + expandable posts ---------- */
+  var blogFilterRow = document.getElementById("blogFilterRow");
+  var blogGrid = document.getElementById("blogGrid");
+  if (blogFilterRow && blogGrid) {
+    var blogFilterBtns = blogFilterRow.querySelectorAll(".filter-btn");
+    var blogCards = blogGrid.querySelectorAll(".blog-card");
+
+    blogFilterBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        blogFilterBtns.forEach(function (b) { b.classList.remove("is-active"); });
+        btn.classList.add("is-active");
+        var filter = btn.getAttribute("data-filter");
+
+        blogCards.forEach(function (card) {
+          var match = filter === "all" || card.getAttribute("data-category") === filter;
+          card.classList.toggle("is-hidden", !match);
+        });
+      });
+    });
+  }
+  if (blogGrid) {
+    blogGrid.querySelectorAll(".details-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var card = btn.closest(".blog-card");
+        if (card) card.classList.toggle("is-open");
       });
     });
   }

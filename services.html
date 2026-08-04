@@ -17,8 +17,7 @@
 <header class="nav">
   <div class="container">
     <a href="index.html" class="brand">
-      <span class="brand-mark">J</span>
-      Josh<span class="brand-tech">Tech</span>
+      <img src="assets/logo.png" alt="JoshTech logo" class="brand-mark-img">
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
@@ -59,126 +58,74 @@
   </div>
 </div>
 
-<!-- ============ SERVICES ACCORDION ============ -->
+<!-- ============ SERVICES GRID ============ -->
 <section class="section-pad">
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">// how I can help</span>
       <h2 class="h2">Five ways to bring me <em>into a project</em></h2>
-      <p class="lede">Click a row to see what's included. Most projects end up mixing two or three of these.</p>
+      <p class="lede">Most projects end up mixing two or three of these.</p>
     </div>
 
-    <div class="accordion" id="servicesAccordion">
+    <div class="services-columns">
 
-      <div class="acc-item">
-        <button class="acc-trigger" type="button">
-          <span class="acc-num">01</span>
-          <span class="acc-name">Product &amp; UI Design</span>
-          <span class="acc-icon">＋</span>
-        </button>
-        <div class="acc-panel">
-          <div class="acc-panel-inner">
-            <p>Turning a rough idea or a messy existing product into clear, component-based screens in Figma — ready to hand to any developer, not just me.</p>
-            <div class="acc-tags">
-              <span>User flows &amp; wireframes</span>
-              <span>Hi-fi UI screens</span>
-              <span>Prototyping</span>
-              <span>Design handoff</span>
-            </div>
-          </div>
+      <div class="service-col">
+        <span class="acc-num">01</span>
+        <h3 class="service-col-title">Product &amp; UI Design</h3>
+        <p>Turning a rough idea or a messy existing product into clear, component-based screens in Figma — ready to hand to any developer, not just me.</p>
+        <div class="acc-tags">
+          <span>User flows &amp; wireframes</span>
+          <span>Hi-fi UI screens</span>
+          <span>Prototyping</span>
+          <span>Design handoff</span>
         </div>
       </div>
 
-      <div class="acc-item is-open">
-        <button class="acc-trigger" type="button">
-          <span class="acc-num">02</span>
-          <span class="acc-name">Frontend Development</span>
-          <span class="acc-icon">＋</span>
-        </button>
-        <div class="acc-panel">
-          <div class="acc-panel-inner acc-panel-split">
-            <div>
-              <p>Building the interface in React with clean, typed components — matching the design file closely and staying easy for another engineer to pick up later.</p>
-              <div class="acc-tags">
-                <span>React &amp; Next.js</span>
-                <span>Responsive builds</span>
-                <span>Component libraries</span>
-                <span>Performance tuning</span>
-              </div>
-            </div>
-            <div class="acc-visual">
-              <div class="window small">
-                <div class="window-bar">
-                  <span></span><span></span><span></span>
-                  <em>Button.tsx</em>
-                </div>
-                <div class="window-body mono">
-                  <div><span class="tok-key">export function</span> <span class="tok-var">Button</span>({ children }) {</div>
-                  <div class="indent"><span class="tok-key">return</span> &lt;<span class="tok-attr">button</span> <span class="tok-attr">className</span>=<span class="tok-str">"btn"</span>&gt;</div>
-                  <div class="indent indent-2">{children}</div>
-                  <div class="indent">&lt;/<span class="tok-attr">button</span>&gt;</div>
-                  <div>}</div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="service-col">
+        <span class="acc-num">02</span>
+        <h3 class="service-col-title">Frontend Development</h3>
+        <p>Building the interface in React with clean, typed components — matching the design file closely and staying easy for another engineer to pick up later.</p>
+        <div class="acc-tags">
+          <span>React &amp; Next.js</span>
+          <span>Responsive builds</span>
+          <span>Component libraries</span>
+          <span>Performance tuning</span>
         </div>
       </div>
 
-      <div class="acc-item">
-        <button class="acc-trigger" type="button">
-          <span class="acc-num">03</span>
-          <span class="acc-name">Design Systems</span>
-          <span class="acc-icon">＋</span>
-        </button>
-        <div class="acc-panel">
-          <div class="acc-panel-inner">
-            <p>Tokens, reusable components and short docs so your product looks consistent as more people start building on top of it.</p>
-            <div class="acc-tags">
-              <span>Design tokens</span>
-              <span>Component libraries</span>
-              <span>Documentation</span>
-              <span>Figma ↔ code parity</span>
-            </div>
-          </div>
+      <div class="service-col">
+        <span class="acc-num">03</span>
+        <h3 class="service-col-title">Design Systems</h3>
+        <p>Tokens, reusable components and short docs so your product looks consistent as more people start building on top of it.</p>
+        <div class="acc-tags">
+          <span>Design tokens</span>
+          <span>Component libraries</span>
+          <span>Documentation</span>
+          <span>Figma ↔ code parity</span>
         </div>
       </div>
 
-      <div class="acc-item">
-        <button class="acc-trigger" type="button">
-          <span class="acc-num">04</span>
-          <span class="acc-name">API Integration &amp; Backend Basics</span>
-          <span class="acc-icon">＋</span>
-        </button>
-        <div class="acc-panel">
-          <div class="acc-panel-inner">
-            <p>Connecting the frontend to real data — REST or GraphQL APIs, auth flows, and lightweight Node services when a project needs one.</p>
-            <div class="acc-tags">
-              <span>REST &amp; GraphQL</span>
-              <span>Auth flows</span>
-              <span>Node.js services</span>
-              <span>Third-party integrations</span>
-            </div>
-          </div>
+      <div class="service-col">
+        <span class="acc-num">04</span>
+        <h3 class="service-col-title">API Integration &amp; Backend Basics</h3>
+        <p>Connecting the frontend to real data — REST or GraphQL APIs, auth flows, and lightweight Node services when a project needs one.</p>
+        <div class="acc-tags">
+          <span>REST &amp; GraphQL</span>
+          <span>Auth flows</span>
+          <span>Node.js services</span>
+          <span>Third-party integrations</span>
         </div>
       </div>
 
-      <div class="acc-item">
-        <button class="acc-trigger" type="button">
-          <span class="acc-num">05</span>
-          <span class="acc-name">Website Design</span>
-          <span class="acc-icon">＋</span>
-        </button>
-        <div class="acc-panel">
-          <div class="acc-panel-inner">
-            <p>Marketing sites, landing pages and portfolios — fast-loading, easy to update, and built to actually convert visitors.</p>
-            <div class="acc-tags">
-              <span>Landing pages</span>
-              <span>SEO basics</span>
-              <span>CMS-friendly builds</span>
-              <span>Mobile-first</span>
-            </div>
-          </div>
+      <div class="service-col">
+        <span class="acc-num">05</span>
+        <h3 class="service-col-title">Website Design</h3>
+        <p>Marketing sites, landing pages and portfolios — fast-loading, easy to update, and built to actually convert visitors.</p>
+        <div class="acc-tags">
+          <span>Landing pages</span>
+          <span>SEO basics</span>
+          <span>CMS-friendly builds</span>
+          <span>Mobile-first</span>
         </div>
       </div>
 
@@ -210,7 +157,7 @@
           <li>Weekly time summary</li>
           <li>Async updates via WhatsApp</li>
         </ul>
-        <button type="button" class="btn btn-ghost js-open-book price-btn">Get started</button>
+        <button type="button" class="btn btn-ghost js-open-book price-btn" data-plan="Hourly — $25/hr">Get started</button>
       </div>
 
       <div class="price-card is-featured">
@@ -223,7 +170,7 @@
           <li>Weekly check-in calls</li>
           <li>2 weeks post-launch support</li>
         </ul>
-        <button type="button" class="btn btn-primary js-open-book price-btn">Get started</button>
+        <button type="button" class="btn btn-primary js-open-book price-btn" data-plan="Project-based — $800+/project">Get started</button>
       </div>
 
       <div class="price-card">
@@ -236,7 +183,7 @@
           <li>Design + dev coverage</li>
           <li>Cancel anytime</li>
         </ul>
-        <button type="button" class="btn btn-ghost js-open-book price-btn">Get started</button>
+        <button type="button" class="btn btn-ghost js-open-book price-btn" data-plan="Monthly retainer — $1,600/mo">Get started</button>
       </div>
     </div>
   </div>
@@ -249,7 +196,7 @@
       <span class="eyebrow">// not sure what you need?</span>
       <h2 class="h2">Let's figure it out <em>on a quick call</em></h2>
     </div>
-    <button type="button" class="btn btn-primary js-open-book">Book Me <span class="btn-arrow">→</span></button>
+    <button type="button" class="btn btn-primary cta-btn js-open-book">Book Me <span class="btn-arrow">→</span></button>
   </div>
 </section>
 
@@ -259,8 +206,7 @@
     <div class="footer-top">
       <div class="footer-about">
         <a href="index.html" class="brand">
-          <span class="brand-mark">J</span>
-          Josh<span class="brand-tech">Tech</span>
+          <img src="assets/logo.png" alt="JoshTech logo" class="brand-mark-img">
         </a>
         <p>Product designer and frontend developer helping small teams ship interfaces that feel obvious in hindsight.</p>
         <div class="social-row">
@@ -312,6 +258,9 @@
     <p class="modal-sub">Fill this in and it'll open WhatsApp with everything ready to send straight to me.</p>
 
     <form id="bookForm" class="book-form">
+      <label id="bookPlanRow" class="plan-row" hidden>Plan / package
+        <input type="text" name="plan" id="bookPlanInput" placeholder="e.g. Project-based">
+      </label>
       <label>Full name
         <input type="text" name="name" required placeholder="Your name">
       </label>
@@ -342,7 +291,7 @@
 <div class="chatbot" id="chatbot">
   <div class="chat-panel" id="chatPanel">
     <div class="chat-head">
-      <span class="brand-mark small">J</span>
+      <img src="assets/logo.png" alt="JoshTech logo" class="brand-mark-img small">
       <div>
         <strong>JoshTech Assistant</strong>
         <span>Usually replies instantly</span>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Finly personal finance dashboard placeholder screen">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123B33"/>
+      <stop offset="1" stop-color="#12474A"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22C883"/>
+      <stop offset="1" stop-color="#10A6A0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+
+  <g transform="translate(56,32)">
+    <rect x="0" y="0" width="528" height="272" rx="14" fill="#0D131B" stroke="#2A3542" stroke-width="2"/>
+    <rect x="0" y="0" width="528" height="30" rx="14" fill="#151D28"/>
+    <circle cx="17" cy="15" r="4" fill="#3A4553"/><circle cx="33" cy="15" r="4" fill="#3A4553"/><circle cx="49" cy="15" r="4" fill="#3A4553"/>
+
+    <rect x="0" y="30" width="112" height="242" fill="#101720"/>
+    <rect x="16" y="50" width="66" height="9" rx="4.5" fill="url(#brand)"/>
+    <rect x="16" y="80" width="80" height="7" rx="3.5" fill="#242E3A"/>
+    <rect x="16" y="100" width="66" height="7" rx="3.5" fill="#2A3542"/>
+    <rect x="16" y="120" width="74" height="7" rx="3.5" fill="#242E3A"/>
+
+    <!-- donut -->
+    <g transform="translate(190,105)">
+      <circle r="46" fill="none" stroke="#242E3A" stroke-width="16"/>
+      <circle r="46" fill="none" stroke="url(#brand)" stroke-width="16" stroke-dasharray="180 300" stroke-linecap="round" transform="rotate(-90)"/>
+      <text x="0" y="6" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="16" fill="#EEF2F6">62%</text>
+    </g>
+
+    <!-- bar chart -->
+    <g transform="translate(300,58)">
+      <rect width="200" height="96" rx="8" fill="#151D28" stroke="#242E3A"/>
+      <rect x="16" y="52" width="16" height="30" rx="3" fill="url(#brand)" opacity="0.5"/>
+      <rect x="40" y="38" width="16" height="44" rx="3" fill="url(#brand)" opacity="0.7"/>
+      <rect x="64" y="24" width="16" height="58" rx="3" fill="url(#brand)"/>
+      <rect x="88" y="44" width="16" height="38" rx="3" fill="url(#brand)" opacity="0.6"/>
+      <rect x="112" y="30" width="16" height="52" rx="3" fill="url(#brand)" opacity="0.85"/>
+      <rect x="136" y="58" width="16" height="24" rx="3" fill="url(#brand)" opacity="0.45"/>
+    </g>
+
+    <rect x="16" y="196" width="484" height="56" rx="8" fill="#151D28" stroke="#242E3A"/>
+    <rect x="32" y="210" width="120" height="7" rx="3.5" fill="#3A4553"/>
+    <rect x="420" y="210" width="60" height="7" rx="3.5" fill="url(#brand)" opacity="0.7"/>
+    <rect x="32" y="228" width="90" height="6" rx="3" fill="#242E3A"/>
+  </g>
+
+  <text x="28" y="340" font-family="'JetBrains Mono', monospace" font-size="13" fill="#8FA6A0">// finly — preview</text>
+</svg>

@@ -98,19 +98,14 @@
 /* ================= About preview ================= */
 .about-preview{ background: var(--bg-alt); border-top: 1px solid var(--border-soft); border-bottom: 1px solid var(--border-soft); }
 .about-grid{ display: grid; grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: center; }
-.about-frame{
+.about-photo-frame{
   aspect-ratio: 1/1;
   border-radius: var(--radius-lg);
-  background: var(--gradient-soft);
+  overflow: hidden;
   border: 1px solid var(--border);
-  display: grid; place-items: center;
-  position: relative;
+  background: var(--surface-2);
 }
-.about-frame .brand-mark.large{
-  width: 120px; height: 120px;
-  border-radius: 30px;
-  font-size: 46px;
-}
+.about-photo{ width: 100%; height: 100%; object-fit: cover; display: block; }
 .about-visual{ position: relative; }
 .about-float{
   position: absolute; bottom: -18px; right: -18px;
@@ -122,15 +117,15 @@
 }
 .about-float strong{ font-family: var(--f-display); font-size: 20px; color: var(--green); }
 .about-float span{ font-size: 12px; color: var(--text-muted); }
-@media (max-width: 860px){ .about-grid{ grid-template-columns: 1fr; gap: 48px; } .about-frame{ max-width: 320px; margin: 0 auto; } }
+@media (max-width: 860px){ .about-grid{ grid-template-columns: 1fr; gap: 48px; } .about-photo-frame{ max-width: 320px; margin: 0 auto; } }
 
 /* ================= Work grid ================= */
 .work-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .work-card{ display: block; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); transition: border-color .2s ease, transform .2s ease; }
 .work-card:hover{ border-color: var(--green-dim); transform: translateY(-3px); }
-.work-thumb{ aspect-ratio: 16/10; background: var(--surface-2); }
-.work-thumb-1{ background: linear-gradient(135deg, #17323C, #123B33); }
-.work-thumb-2{ background: linear-gradient(135deg, #123B33, #1B4A3E); }
+.work-thumb{ aspect-ratio: 16/10; overflow: hidden; background: var(--surface-2); }
+.work-thumb img{ width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s ease; }
+.work-card:hover .work-thumb img{ transform: scale(1.04); }
 .work-meta{ padding: 20px 22px; }
 .work-meta h3{ font-family: var(--f-display); font-size: 17px; margin-bottom: 6px; }
 .work-meta span{ font-size: 13px; color: var(--text-muted); }
