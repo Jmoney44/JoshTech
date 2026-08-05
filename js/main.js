@@ -1,5 +1,5 @@
 // ---- WhatsApp number used for bookings (international format, no + or spaces)
-var JOSHTECH_WHATSAPP = "2347070503044";
+var JOSHTECH_WHATSAPP = "2348141135589";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -123,10 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var replies = {
-    services: "I cover three things mainly: Product & UI Design, Frontend Development, and Design Systems. There's more detail on the Services page.",
+    services: "We cover the full stack: Product & UI Design, Frontend & Mobile Development, Design Systems, Cloud & DevOps, Cybersecurity, and IT Consulting. There's more detail on the Services page.",
     pricing: "Pricing depends on scope — most projects are quoted after a quick chat about what you need. Tap \"Book a call\" and I'll get the details and follow up with a quote.",
     book: "Happy to jump on a call. Click the \"Book Me\" button at the top, fill the short form, and it'll open WhatsApp with everything ready to send to Josh.",
-    contact: "You can reach Josh directly:\nEmail: joshtech3913@gmail.com\nWhatsApp: 0707 050 3044",
+    contact: "You can reach Josh directly:\nEmail: joshtech3913@gmail.com\nWhatsApp: +234 814 113 5589",
     projects: "You can see recent work on the Projects page — a mix of mobile apps, web apps and design systems.",
     default: "Good question — for anything specific it's best to book a quick call so Josh can give you a proper answer. Want me to open the booking form?"
   };
