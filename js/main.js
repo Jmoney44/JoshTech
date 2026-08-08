@@ -195,25 +195,74 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ---------- Projects filter ---------- */
+  /* ---------- Projects filter + pagination ---------- */
   var filterRow = document.getElementById("filterRow");
   var projectsGrid = document.getElementById("projectsGrid");
-  if (filterRow && projectsGrid) {
-    var filterBtns = filterRow.querySelectorAll(".filter-btn");
-    var cards = projectsGrid.querySelectorAll(".project-card");
+  var prevPageBtn = document.getElementById("prevPage");
+  var nextPageBtn = document.getElementById("nextPage");
+  var pageIndicator = document.getElementById("pageIndicator");
+  var PROJECTS_PER_PAGE = 4;
 
-    filterBtns.forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        filterBtns.forEach(function (b) { b.classList.remove("is-active"); });
-        btn.classList.add("is-active");
-        var filter = btn.getAttribute("data-filter");
+  if (projectsGrid) {
+    var allCards = Array.prototype.slice.call(projectsGrid.querySelectorAll(".project-card"));
+    var currentFilter = "all";
+    var currentPage = 1;
 
-        cards.forEach(function (card) {
-          var match = filter === "all" || card.getAttribute("data-category") === filter;
-          card.classList.toggle("is-hidden", !match);
+    var getMatchingCards = function () {
+      return allCards.filter(function (card) {
+        return currentFilter === "all" || card.getAttribute("data-category") === currentFilter;
+      });
+    };
+
+    var renderProjects = function () {
+      var matching = getMatchingCards();
+      var totalPages = Math.max(1, Math.ceil(matching.length / PROJECTS_PER_PAGE));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      var start = (currentPage - 1) * PROJECTS_PER_PAGE;
+      var end = start + PROJECTS_PER_PAGE;
+
+      allCards.forEach(function (card) {
+        var isMatch = currentFilter === "all" || card.getAttribute("data-category") === currentFilter;
+        card.classList.toggle("is-hidden", !isMatch);
+      });
+      matching.forEach(function (card, i) {
+        card.classList.toggle("is-page-hidden", i < start || i >= end);
+      });
+
+      if (pageIndicator) pageIndicator.textContent = "Page " + currentPage + " of " + totalPages;
+      if (prevPageBtn) prevPageBtn.disabled = currentPage <= 1;
+      if (nextPageBtn) nextPageBtn.disabled = currentPage >= totalPages;
+    };
+
+    if (filterRow) {
+      filterRow.querySelectorAll(".filter-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          filterRow.querySelectorAll(".filter-btn").forEach(function (b) { b.classList.remove("is-active"); });
+          btn.classList.add("is-active");
+          currentFilter = btn.getAttribute("data-filter");
+          currentPage = 1;
+          renderProjects();
         });
       });
-    });
+    }
+
+    if (prevPageBtn) {
+      prevPageBtn.addEventListener("click", function () {
+        currentPage -= 1;
+        renderProjects();
+        projectsGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+    if (nextPageBtn) {
+      nextPageBtn.addEventListener("click", function () {
+        currentPage += 1;
+        renderProjects();
+        projectsGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+
+    renderProjects();
   }
 
   /* ---------- Project details toggle ---------- */
